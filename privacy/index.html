@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>한장한장 개인정보 처리방침</title>
+<style>
+  body { font-family: -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; max-width: 760px; margin: 0 auto; padding: 24px 20px 64px; line-height: 1.7; color: #1d2733; }
+  h1 { font-size: 1.6rem; margin-top: 2.2rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 1px solid #e3e8ee; padding-bottom: .3rem; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  th, td { border: 1px solid #d6dde5; padding: .5rem .6rem; text-align: left; vertical-align: top; }
+  th { background: #f3f6f9; }
+  a { color: #1e5a9a; word-break: break-all; }
+  hr { margin: 3rem 0; border: 0; border-top: 1px solid #e3e8ee; }
+</style>
+</head>
+<body>
+<!-- privacy-policy.md 에서 생성. 내용을 고칠 때는 md를 고친 뒤 다시 생성하거나 둘 다 고치세요. -->
+<h1>한장한장 개인정보 처리방침</h1>
+<p>시행일: 2026년 11월 18일<br>
+개발자: 딸바보<br>
+문의: shlee4ever@gmail.com</p>
+<p>한장한장(이하 "앱")은 책과 문서를 촬영해 PDF로 만드는 앱입니다. 앱은 회원 가입이나 로그인 없이 동작하며, 촬영한 이미지를 개발자의 서버로 보내지 않습니다.</p>
+<h2>1. 앱이 사용하는 권한</h2>
+<table>
+<thead>
+<tr>
+<th>권한</th>
+<th>용도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>카메라</td>
+<td>책과 문서를 촬영하기 위해 사용합니다. 카메라 영상은 단말 안에서만 처리됩니다.</td>
+</tr>
+</tbody>
+</table>
+<p>앱은 위치, 연락처, 마이크, 저장소 전체 접근 권한을 요청하지 않습니다.</p>
+<h2>2. 단말 안에서만 처리하는 정보</h2>
+<p>다음 정보는 모두 사용자의 단말 안에서 처리되고 앱 전용 저장 공간에 저장됩니다. 개발자는 이 정보에 접근할 수 없습니다.</p>
+<ul>
+<li>촬영한 페이지 이미지와 필기 지우기 전 원본 이미지</li>
+<li>책 제목, 폴더, 페이지 순서 등 사용자가 입력하거나 정리한 정보</li>
+<li>촬영 설정과 화면 테마 같은 앱 설정</li>
+</ul>
+<p>앱 안에서 책이나 페이지를 지우면 먼저 앱 안의 휴지통으로 옮겨지고, 사용자가 정한 보관 기간이 지나거나 휴지통을 비우면 영구히 삭제됩니다. 앱을 삭제하면 모든 정보가 함께 삭제됩니다. 앱은 기기 백업에도 포함되지 않도록 설정되어 있습니다.</p>
+<p>사용자가 &ldquo;백업·복원&rdquo;으로 만든 백업 파일은 사용자가 고른 위치(드라이브, PC 등)에만 저장되며, 앱이 서버로 전송하지 않습니다. 복원도 사용자가 고른 백업 파일에서만 읽습니다.</p>
+<p>PDF 파일을 "공유"하면, 사용자가 선택한 앱(메일, 메신저, 클라우드 저장소 등)으로 파일이 전달됩니다. 그 이후의 처리는 해당 앱의 정책을 따릅니다.</p>
+<h2>3. 외부로 전송되는 정보</h2>
+<p>앱은 단말 안에서 동작하는 기계학습 라이브러리를 사용합니다.</p>
+<table>
+<thead>
+<tr>
+<th>라이브러리</th>
+<th>기능</th>
+<th>전송될 수 있는 정보</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google MediaPipe (손 인식)</td>
+<td>책을 누른 손가락 찾기·지우기</td>
+<td>라이브러리 사용·성능에 관한 진단 정보</td>
+</tr>
+<tr>
+<td>Microsoft ONNX Runtime</td>
+<td>책 외곽 찾기, 휘어진 페이지 펴기</td>
+<td>없음 (단말 안에서만 동작)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>MediaPipe의 진단 정보는 Google이 라이브러리의 진단과 사용 통계를 위해 수집하며, 전송 중 암호화(HTTPS)됩니다.</li>
+<li><strong>촬영한 이미지는 어느 라이브러리로도 전송되지 않습니다.</strong></li>
+<li>자세한 내용은 Google 개인정보처리방침(<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>)을 참고하세요.</li>
+</ul>
+<p>앱에는 광고, 사용자 행동 분석 도구, 개발자 서버가 없습니다.</p>
+<h2>4. 개인정보의 제3자 제공</h2>
+<p>개발자는 사용자의 개인정보를 수집하지 않으므로 제3자에게 제공하지 않습니다.</p>
+<h2>5. 아동의 개인정보</h2>
+<p>앱은 만 13세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 알면서 수집하지 않습니다.</p>
+<h2>6. 처리방침의 변경</h2>
+<p>이 처리방침이 바뀌면 이 페이지에 시행일과 함께 게시합니다. 중요한 변경은 앱 업데이트 내용에도 알립니다.</p>
+<h2>7. 문의</h2>
+<p>개인정보와 관련한 문의는 shlee4ever@gmail.com으로 보내 주세요.</p>
+<hr>
+<h1>HanjangHanjang Privacy Policy (English summary)</h1>
+<p>Effective date: November 18, 2026 · Developer: 딸바보 · Contact: shlee4ever@gmail.com</p>
+<ul>
+<li>HanjangHanjang works without an account. Captured page images, book titles, folders and settings are processed and stored <strong>only on your device</strong> and are never sent to the developer.</li>
+<li>The app requests only the <strong>camera</strong> permission, used to capture pages.</li>
+<li>Deleted books and pages first go to the in-app trash and are permanently deleted after the retention period you choose or when you empty the trash. Uninstalling the app deletes everything.</li>
+<li>The app uses Google MediaPipe (hand detection) and Microsoft ONNX Runtime (page detection and flattening), which run on the device. MediaPipe may send diagnostics and usage information about the library to Google, encrypted in transit. ONNX Runtime sends nothing. <strong>Images are never sent.</strong></li>
+<li>No ads, no analytics tools, no developer servers.</li>
+<li>The app is not directed at children under 13.</li>
+</ul>
+</body>
+</html>
