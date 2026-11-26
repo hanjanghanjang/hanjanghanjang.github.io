@@ -1,0 +1,103 @@
+/* 한장한장 테스터 모집 페이지. 앱과 같은 자두색 바탕에 분홍 강조색. */
+:root {
+  --bg: #170a13;
+  --surface: #2a1222;
+  --surface-2: #3a1a2f;
+  --line: #4d2a41;
+  --text: #fbf3f7;
+  --muted: #c9adbd;
+  --accent: #ff2d8a;
+  --accent-soft: #ff8cbf;
+  --radius-lg: 28px;
+  --radius-md: 16px;
+  --gutter: clamp(16px, 5vw, 32px);
+  --font: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: radial-gradient(120% 60% at 50% 0%, #3b1530 0%, var(--bg) 60%) no-repeat, var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.6;
+  word-break: keep-all;
+}
+a { color: var(--accent-soft); }
+
+.hero { padding: 56px var(--gutter) 24px; max-width: 640px; margin: 0 auto; }
+.eyebrow {
+  display: inline-block; margin: 0 0 16px; padding: 6px 12px;
+  border: 1px solid var(--line); border-radius: 999px;
+  color: var(--accent-soft); font-size: 0.85rem; font-weight: 600;
+}
+h1 { margin: 0 0 16px; font-size: clamp(2.2rem, 1.4rem + 4vw, 3.2rem); line-height: 1.2; letter-spacing: -0.02em; }
+h1 span { color: var(--accent); }
+.lead { margin: 0 0 28px; color: var(--muted); font-size: 1.05rem; }
+.cta {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 56px; padding: 0 28px; border: 0; border-radius: 999px;
+  background: var(--accent); color: #1a0612; font: 700 1.05rem var(--font);
+  text-decoration: none; cursor: pointer;
+  box-shadow: 0 10px 30px -10px rgba(255, 45, 138, 0.7);
+  transition: transform 150ms var(--ease), box-shadow 150ms var(--ease), opacity 150ms;
+}
+.cta:hover { transform: translateY(-2px); box-shadow: 0 14px 34px -10px rgba(255, 45, 138, 0.85); }
+.cta:active { transform: translateY(0); }
+.cta:focus-visible, .step-link:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; }
+
+/* 화면 모음: 옆으로 넘기는 띠 */
+.shots {
+  display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 16px var(--gutter) 8px; scrollbar-width: none;
+}
+.shots::-webkit-scrollbar { display: none; }
+.shots figure { flex: 0 0 auto; width: min(62vw, 270px); margin: 0; scroll-snap-align: center; }
+.shots img {
+  display: block; width: 100%; height: auto; border-radius: 22px;
+  border: 1px solid var(--line); box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.8);
+}
+.swipe-hint { margin: 4px 0 0; text-align: center; color: var(--muted); font-size: 0.85rem; }
+
+main section:not(.shots) { max-width: 640px; margin: 0 auto; padding: 40px var(--gutter) 8px; }
+h2 { margin: 0 0 18px; font-size: 1.5rem; letter-spacing: -0.01em; }
+
+.features ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.features li {
+  padding: 16px 18px; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius-md); color: var(--muted);
+}
+.features li strong { display: block; color: var(--text); font-size: 1.05rem; margin-bottom: 2px; }
+.features li:first-child { border-color: var(--accent); background: linear-gradient(135deg, #3d1430, var(--surface)); }
+
+.steps ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.steps li { display: flex; gap: 14px; color: var(--muted); }
+.steps li > span {
+  flex: 0 0 36px; height: 36px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--accent); color: #1a0612; font-weight: 800;
+}
+.steps li strong { display: block; color: var(--text); }
+.steps-lead { margin: 0 0 20px; color: var(--muted); }
+.steps-lead strong { color: var(--text); }
+.step-link {
+  display: flex; align-items: center; justify-content: center; margin-top: 10px;
+  min-height: 48px; padding: 0 20px; border-radius: 999px;
+  background: var(--surface-2); border: 1px solid var(--accent);
+  color: var(--text); font-weight: 700; text-decoration: none;
+  transition: background 150ms var(--ease), transform 150ms var(--ease);
+}
+.step-link:hover { background: var(--accent); color: #1a0612; transform: translateY(-1px); }
+.steps li > div { flex: 1; }
+.note strong { color: var(--text); }
+.fineprint { margin: 16px 0 0; color: var(--muted); font-size: 0.82rem; }
+.note { margin: 20px 0 0; padding: 14px 16px; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 12px 12px 0; color: var(--muted); font-size: 0.92rem; }
+
+footer { max-width: 640px; margin: 0 auto; padding: 40px var(--gutter) 56px; color: var(--muted); font-size: 0.85rem; text-align: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cta, .step-link { transition: none; }
+}
+.steps-lead + .note { margin: 0 0 24px; }
