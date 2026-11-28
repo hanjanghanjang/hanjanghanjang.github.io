@@ -104,3 +104,15 @@ footer { max-width: 640px; margin: 0 auto; padding: 40px var(--gutter) 56px; col
 .fallback h3 { margin: 0 0 6px; font-size: 1.05rem; }
 .fallback p { margin: 0; color: var(--muted); font-size: 0.95rem; }
 .copyright-note { margin: 0 0 12px; font-size: 0.78rem; line-height: 1.5; opacity: 0.85; }
+
+/* 만든 사람의 마음: 『논어』 인용 */
+.maker-note figure {
+  margin: 0 0 18px; padding: 24px 22px 20px; border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #3d1430, var(--surface)); border: 1px solid var(--line);
+  text-align: center;
+}
+.maker-note blockquote { margin: 0; }
+.maker-note blockquote p { margin: 0; font-size: clamp(1.15rem, 1rem + 1vw, 1.35rem); font-weight: 700; line-height: 1.5; }
+.maker-note blockquote .hanja { margin-top: 8px; color: var(--accent-soft); font-size: 0.95rem; font-weight: 500; letter-spacing: 0.12em; }
+.maker-note figcaption { margin-top: 10px; color: var(--muted); font-size: 0.85rem; }
+.maker-note > p { margin: 0; color: var(--muted); }
